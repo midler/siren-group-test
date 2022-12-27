@@ -1,0 +1,32 @@
+/* montserrat-regular - latin */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../../assets/fonts/montserrat-v25-latin-regular.woff2") format("woff2");
+}
+
+/* montserrat-500 - latin */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../../assets/fonts/montserrat-v25-latin-500.woff2") format("woff2");
+}
+
+/* montserrat-600 - latin */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("../../assets/fonts/montserrat-v25-latin-600.woff2") format("woff2");
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../../assets/fonts/montserrat-v25-latin-700.woff2") format("woff2");
+}
