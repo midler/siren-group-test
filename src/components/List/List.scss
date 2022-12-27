@@ -1,0 +1,26 @@
+@use "../../styles/bootstrap/bootstrap.scss";
+
+.list {
+  @include bootstrap.listReset;
+
+  display: flex;
+  flex-direction: column;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  flex-wrap: wrap;
+
+  &--horizontal {
+    flex-direction: row;
+  }
+
+  &--align-top {
+    align-items: flex-start;
+  }
+
+  &--align-bottom {
+    align-items: flex-end;
+  }
+
+  &--align-center {
+    align-items: center;
+  }
+}
