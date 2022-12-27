@@ -68,6 +68,7 @@
     }
   },
   "devDependencies": {
+    "@ljcl/storybook-addon-cssprops": "^2.3.5",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
     "@storybook/addon-interactions": "^6.5.15",
