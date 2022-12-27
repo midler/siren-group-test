@@ -1,0 +1,45 @@
+.button {
+  display: flex;
+  padding: var(--button-padding);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--button-text-color);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-main-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: button;
+  text-transform: none;
+
+  &--wide {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: var(--button-hover-color);
+  }
+
+  &:active {
+    background-color: var(--button-focus-color);
+  }
+
+  &:focus-visible {
+    background-color: var(--button-focus-color);
+  }
+
+  &:focus {
+    @supports not selector(:focus-visible) {
+      background-color: var(--button-focus-color);
+    }
+  }
+}
