@@ -1,11 +1,8 @@
 @use "../bootstrap/bootstrap.scss";
 
 .mainPage {
-  background-color: #2f54eb;
-
   &__container {
     width: 100%;
-    padding: 0 16px;
     @media (min-width: bootstrap.$desktop) {
       width: bootstrap.$desktop;
       margin: 0 auto;
@@ -13,6 +10,12 @@
   }
 
   &__header {
+    background-color: var(--accent-color);
     margin-bottom: 24px;
+  }
+
+  &__footer {
+    background-color: var(--accent-color);
+    color: #ffffff;
   }
 }

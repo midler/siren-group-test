@@ -1,10 +1,75 @@
+@use "../bootstrap/bootstrap.scss";
+
 .mainHeader {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  padding: 8px 16px;
+  padding: 8px 16px 54px 16px;
+  color: #ffffff;
+
+  &__layer-1 {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 24px;
+  }
+
+  &__layer-2 {
+    @media (min-width: bootstrap.$tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+  }
 
   &__link {
     --text-color: #fff;
+  }
+
+  &__offer {
+    margin-bottom: 16px;
+
+    @media (min-width: bootstrap.$tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 1.4;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+
+  &__titleMark {
+    background-color: #52c41a;
+    border-radius: 4px;
+    color: inherit;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__offerImage {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 103px;
+      height: 40px;
+      background-image: url("../../assets/images/offer-label.svg");
+      background-repeat: no-repeat;
+      right: 8px;
+      bottom: 8px;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
   }
 }
