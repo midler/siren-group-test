@@ -9,15 +9,15 @@ import "./Logo.scss";
 /**
  * Primary UI component for user interaction
  */
-export const Logo = ({ ...props }) => {
+export const Logo = ({ className, href,src, description, width, height }) => {
   return (
-    <a className={clsx("logo", props.className)} href={props.href}>
+    <a className={clsx("logo", className)} href={href}>
       <img
-        src={props.src}
+        src={src}
         className="logo__svg"
-        alt={props.description}
-        width={props.width}
-        height={props.height}
+        alt={description}
+        width={width}
+        height={height}
       />
     </a>
   );
