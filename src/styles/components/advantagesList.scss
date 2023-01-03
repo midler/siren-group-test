@@ -1,0 +1,59 @@
+@use "../bootstrap/bootstrap.scss";
+
+.advantagesList {
+  @include bootstrap.listReset;
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+
+    & + & {
+      margin-top: 24px;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 64px;
+      height: 64px;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url("../../assets/images/check.svg");
+    }
+
+    &:nth-child(2)::before {
+      background-image: url("../../assets/images/modern-house.svg");
+    }
+
+    &:nth-child(3)::before {
+      background-image: url("../../assets/images/savings.svg");
+    }
+
+    &:nth-child(4)::before {
+      background-image: url("../../assets/images/rating.svg");
+    }
+  }
+
+  &__text {
+    margin: 0;
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #263238;
+    flex: 1;
+
+    & svg {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+  }
+}

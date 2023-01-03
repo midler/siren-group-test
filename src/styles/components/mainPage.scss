@@ -3,6 +3,12 @@
 .mainPage {
   &__container {
     width: 100%;
+    padding: 0 16px;
+
+    &--no-padding {
+      padding: 0;
+    }
+
     @media (min-width: bootstrap.$desktop) {
       width: bootstrap.$desktop;
       margin: 0 auto;
@@ -11,7 +17,15 @@
 
   &__header {
     background-color: var(--accent-color);
-    margin-bottom: 24px;
+    margin-bottom: 44px;
+  }
+
+  &__advantages {
+    margin-bottom: 44px;
+  }
+
+  &__calculate {
+    margin-bottom: 44px;
   }
 
   &__footer {
