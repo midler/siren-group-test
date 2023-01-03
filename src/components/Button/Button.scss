@@ -1,5 +1,6 @@
 .button {
   display: flex;
+  gap: 8px;
   padding: var(--button-padding);
   font-family: inherit;
   font-weight: 700;
@@ -35,6 +36,11 @@
 
   &:focus-visible {
     background-color: var(--button-focus-color);
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
   }
 
   &:focus {
