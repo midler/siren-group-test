@@ -4,23 +4,23 @@ import clsx from "clsx";
 
 import "./List.scss";
 
-export const List = ({ ...props }) => {
+export const List = ({ horizontal, align, className, children }) => {
   return (
     <ul
       className={clsx(
         "list",
-        props.horizontal ? "list--horizontal" : "",
-        props.align ? `list--align-${props.align}` : "",
-        props.className ? props.className : ""
+        horizontal ? "list--horizontal" : "",
+        align ? `list--align-${align}` : "",
+        className
       )}
     >
-      {props.children?.map((item, key) => {
+      {children?.map((item, key) => {
         return (
           <li
             key={key}
             className={clsx(
               'list__item',
-               props.className ? `${props.className}__item` : ""
+               className ? `${className}__item` : ""
             )}
           >
             {item}
@@ -39,5 +39,4 @@ List.propTypes = {
 
 List.defaultProps = {
   horizontal: false,
-  align: "top",
 };
