@@ -4,21 +4,21 @@ import clsx from "clsx";
 
 import "./Link.scss";
 
-export const Link = ({ ...props }) => {
-  return props.href ? (
+export const Link = ({ href, className, handleClick, children }) => {
+  return href ? (
     <a
-      className={clsx("link", props.className)}
-      href={props.href}
-      onClick={props.handleClick}
+      className={clsx("link", className)}
+      href={href}
+      onClick={handleClick}
     >
-      {props.children}
+      {children}
     </a>
   ) : (
     <button
-      className={clsx("link", props.className)}
-      onClick={props.handleClick}
+      className={clsx("link", className)}
+      onClick={handleClick}
     >
-      {props.children}
+      {children}
     </button>
   );
 };
