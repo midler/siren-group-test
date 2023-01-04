@@ -4,7 +4,15 @@ import clsx from "clsx";
 
 import "./Input.scss";
 
-export const Input = ({ label, type, value, onChange, placeholder, error }) => {
+export const Input = ({
+  label,
+  type,
+  value,
+  onChange,
+  placeholder,
+  error,
+  className,
+}) => {
   const [focus, useFocus] = useState(false);
 
   const useFocusOnHandler = () => {
@@ -15,14 +23,13 @@ export const Input = ({ label, type, value, onChange, placeholder, error }) => {
     useFocus(false);
   };
 
-
   return (
-    <div className="input">
+    <div className={clsx("input", className)}>
       <label
         className={clsx(
           "input__wrapper",
           value ? "input__wrapper--not-empty" : "input__wrapper--empty",
-          focus && 'input__wrapper--focus'
+          focus && "input__wrapper--focus"
         )}
       >
         <span className="input__label">{label}</span>
