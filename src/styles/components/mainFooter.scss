@@ -1,0 +1,21 @@
+@use "../bootstrap/bootstrap.scss";
+
+.mainFooter {
+  padding: 24px 2px 48px;
+
+  &__logo {
+    margin-bottom: 24px;
+  }
+
+  &__menu {
+    --text-color: white;
+    @include bootstrap.listReset;
+    max-width: 170px;
+  }
+
+  &__menu-item {
+    & + & {
+      margin-top: 16px;
+    }
+  }
+}

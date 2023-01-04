@@ -33,7 +33,7 @@
   &__block {
     background-color: #2f54eb;
     border-radius: 24px;
-    padding: 24px 24.5px 24px 24.5px;
+    padding: 24px 24.5px 48px 24.5px;
     color: white;
   }
 
@@ -57,6 +57,7 @@
     padding: 0;
     border: none;
   }
+
   &__form-field-title {
     font-weight: 500;
     font-size: 23px;
@@ -64,5 +65,14 @@
     text-align: center;
     margin-bottom: 24px;
     padding: 0;
+  }
+
+  &__form-input {
+    margin-bottom: 8px;
+  }
+
+  &__form-input-text {
+    margin: 0;
+    margin-bottom: 16px;
   }
 }

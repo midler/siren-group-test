@@ -3,12 +3,20 @@
 .mainHeader {
   padding: 8px 0 54px 0;
   color: #ffffff;
+  @media (min-width: bootstrap.$tablet) {
+    padding-top: 16px;
+    padding-bottom: 101px;
+  }
 
   &__layer-1 {
     display: flex;
     justify-content: space-between;
     align-content: center;
     margin-bottom: 24px;
+    align-items: flex-start;
+    @media (min-width: bootstrap.$tablet) {
+      margin-bottom: 58px;
+    }
   }
 
   &__layer-2 {
@@ -21,6 +29,9 @@
 
   &__link {
     --text-color: #fff;
+    @media (min-width: bootstrap.$tablet) {
+      margin-top: 8px;
+    }
   }
 
   &__offer {
@@ -28,6 +39,18 @@
 
     @media (min-width: bootstrap.$tablet) {
       margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__logo {
+    & > .logo__svg {
+      @media (min-width: bootstrap.$tablet) {
+        width: 206px;
+        height: 49px;
+      }
     }
   }
 
@@ -38,6 +61,12 @@
     color: #ffffff;
     margin: 0;
     margin-bottom: 16px;
+    @media (min-width: bootstrap.$tablet) {
+      font-weight: 600;
+      font-size: 35px;
+      line-height: 1.37;
+      margin-bottom: 32px;
+    }
   }
 
   &__titleMark {
@@ -48,6 +77,11 @@
 
   &__description {
     margin: 0;
+    @media (min-width: bootstrap.$tablet) {
+      font-weight: 500;
+      font-size: 23px;
+      line-height: 32px;
+    }
   }
 
   &__offerImage {

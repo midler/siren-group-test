@@ -4,15 +4,15 @@ import "./App.scss";
 
 import { Link } from "./components/Link/Link.jsx";
 import { Logo } from "./components/Logo/Logo.jsx";
-import { List } from "./components/List/List.jsx";
 import { Button } from "./components/Button/Button.jsx";
 import { Input } from "./components/Input/Input.jsx";
 
 import LogoSVG from "./assets/images/logo.svg";
+import LogoFooterSVG from "./assets/images/logo-footer.svg";
 import offerImage from "./assets/images/offer.jpg";
 
 function App() {
-  const [zipCode, useZipCode] = useState('');
+  const [zipCode, useZipCode] = useState("");
 
   const useZipCodeHandler = (e) => useZipCode(e.target.value);
 
@@ -108,21 +108,19 @@ function App() {
                       clipRule="evenodd"
                     />
                   </svg>{" "}
-                  Сustomer rating
+                  Сustomer&nbsp;rating
                 </p>
               </li>
             </ul>
           </div>
         </section>
         <div className="mainPage__calculate calculate">
-          <div className="mainPage__container">
+          <div className="mainPage__container mainPage__container--no-padding">
             <p className="calculate__attention">
               <i className="calculate__attention-text">
                 You will be surprised how affordable gutter guards are!
               </i>
             </p>
-          </div>
-          <div className="mainPage__container mainPage__container--no-padding">
             <section className="calculate__block">
               <h2 className="calculate__title">
                 See How Much Gutter Guards Cost In The XX, XXX Area
@@ -138,9 +136,14 @@ function App() {
                     placeholder="12345"
                     onChange={useZipCodeHandler}
                     value={zipCode}
+                    className="calculate__form-input"
                   />
-                  <p>Free, no-obligation estimates.</p>
-                  <Button wide={true}>Get estimate</Button>
+                  <p className="calculate__form-input-text">
+                    Free, no-obligation estimates.
+                  </p>
+                  <Button wide={true} className="calculate__form-button">
+                    Get estimate
+                  </Button>
                 </fieldset>
               </form>
             </section>
@@ -149,21 +152,31 @@ function App() {
       </div>
       <footer className="mainPage__footer">
         <div className="mainPage__container">
-          <section>
+          <section className="mainFooter">
             <Logo
-              src={LogoSVG}
+              src={LogoFooterSVG}
               alt={"Logo HomeBuddy for for homeowners"}
-              width={166}
-              height={40}
-              className="mainHeader__logo"
+              width={203}
+              height={30}
+              className="mainHeader__logo mainFooter__logo"
             />
-            <List>
-              <Link>Terms of Use</Link>
-              <Link>Privacy Policy</Link>
-              <Link>Cookie Policy</Link>
-              <Link>Do Not Sell My PersonalInformation</Link>
-              <Link>Contact us</Link>
-            </List>
+            <ul className="mainFooter__menu">
+              <li className="mainFooter__menu-item">
+                <Link href="#">Terms of Use</Link>
+              </li>
+              <li className="mainFooter__menu-item">
+                <Link href="#">Privacy Policy</Link>
+              </li>
+              <li className="mainFooter__menu-item">
+                <Link href="#">Cookie Policy</Link>
+              </li>
+              <li className="mainFooter__menu-item">
+                <Link href="#">Do Not Sell My PersonalInformation</Link>
+              </li>
+              <li className="mainFooter__menu-item">
+                <Link href="#">Contact us</Link>
+              </li>
+            </ul>
           </section>
         </div>
       </footer>
