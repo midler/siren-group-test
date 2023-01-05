@@ -2,20 +2,42 @@
 
 .mainFooter {
   padding: 24px 2px 48px;
+  @media (min-width: bootstrap.$desktop) {
+    padding: 24px 0 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__logo {
     margin-bottom: 24px;
+    @media (min-width: bootstrap.$desktop) {
+      margin-bottom: 20px;
+    }
   }
 
   &__menu {
     --text-color: white;
     @include bootstrap.listReset;
     max-width: 170px;
+
+    @media (min-width: bootstrap.$desktop) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0;
+      gap: 32px;
+      max-width: none;
+    }
   }
 
   &__menu-item {
     & + & {
       margin-top: 16px;
+      @media (min-width: bootstrap.$desktop) {
+        margin-top: auto;
+      }
+
     }
   }
 }
