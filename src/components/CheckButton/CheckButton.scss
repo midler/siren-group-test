@@ -1,0 +1,59 @@
+@use "../../styles/bootstrap/bootstrap.scss";
+
+.checkButton {
+  --button-padding: 16px 24px;
+  --button-main-color: white;
+  --button-border-radius: 16px;
+  --button-text-color: #000;
+  --button-border-radius: 8px;
+
+  display: flex;
+  gap: 16px;
+  padding: var(--button-padding);
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--button-text-color);
+  align-items: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 2px solid #f5f6fe;
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-main-color);
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: button;
+  text-transform: none;
+  width: 100%;
+
+  @media (min-width: bootstrap.$desktop) {
+    flex-direction: column;
+    min-width: 164px;
+    min-height: 140px;
+    padding: 24px;
+  }
+
+  &:hover,
+  &--active {
+    border-color: var(--button-hover-color);
+  }
+
+  &:focus-visible {
+    border-color: var(--button-hover-color);
+  }
+
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    @supports not selector(:focus-visible) {
+      background-color: var(--button-focus-color);
+    }
+  }
+}
