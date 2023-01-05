@@ -6,18 +6,11 @@ import "./Link.scss";
 
 export const Link = ({ href, className, handleClick, children }) => {
   return href ? (
-    <a
-      className={clsx("link", className)}
-      href={href}
-      onClick={handleClick}
-    >
+    <a className={clsx("link", className)} href={href} onClick={handleClick}>
       {children}
     </a>
   ) : (
-    <button
-      className={clsx("link", className)}
-      onClick={handleClick}
-    >
+    <button className={clsx("link", className)} onClick={handleClick}>
       {children}
     </button>
   );
@@ -31,7 +24,5 @@ Link.propTypes = {
 
 Link.defaultProps = {
   className: "",
-  handleClick: (e) => {
-    console.log(e);
-  },
+  handleClick: () => {},
 };
