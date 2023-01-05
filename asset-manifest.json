@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/siren-group-test/static/css/main.044081b4.css",
+    "main.js": "/siren-group-test/static/js/main.e88ffd50.js",
+    "static/js/787.6e42e9b9.chunk.js": "/siren-group-test/static/js/787.6e42e9b9.chunk.js",
+    "static/media/offer.jpg": "/siren-group-test/static/media/offer.70435aa537bf9dd0eb25.jpg",
+    "static/media/house.png": "/siren-group-test/static/media/house.d69eee5ae6ac5c551ac6.png",
+    "static/media/montserrat-v25-latin-700.woff2": "/siren-group-test/static/media/montserrat-v25-latin-700.56c09b9a46af6a54eeb3.woff2",
+    "static/media/montserrat-v25-latin-500.woff2": "/siren-group-test/static/media/montserrat-v25-latin-500.38a674fae449557fef97.woff2",
+    "static/media/montserrat-v25-latin-regular.woff2": "/siren-group-test/static/media/montserrat-v25-latin-regular.acb6629fe45c43ad5d8b.woff2",
+    "static/media/montserrat-v25-latin-600.woff2": "/siren-group-test/static/media/montserrat-v25-latin-600.5d6df38dd70f631c488b.woff2",
+    "static/media/offer-label.svg": "/siren-group-test/static/media/offer-label.bdb8917d0f2bdc6209ce.svg",
+    "static/media/logo.svg": "/siren-group-test/static/media/logo.a6456fc5fa2a0f51b365441894116a84.svg",
+    "static/media/logo-footer.svg": "/siren-group-test/static/media/logo-footer.53cc2b5c4941345f32a1c74599c53101.svg",
+    "static/media/check.svg": "/siren-group-test/static/media/check.8b16a168328540356c8a.svg",
+    "static/media/Logo.svg": "/siren-group-test/static/media/Logo.599ddf0e66c5fedb45bbcb3c743395fd.svg",
+    "static/media/savings.svg": "/siren-group-test/static/media/savings.4dcb8ee5d8ae87e18636.svg",
+    "static/media/modern-house.svg": "/siren-group-test/static/media/modern-house.d140d450cb9278616b86.svg",
+    "static/media/rating.svg": "/siren-group-test/static/media/rating.25aedd6cc554e71273ec.svg",
+    "index.html": "/siren-group-test/index.html",
+    "static/media/savings-small.svg": "/siren-group-test/static/media/savings-small.461037e6082ce7b10cfa.svg",
+    "static/media/close.svg": "/siren-group-test/static/media/close.f2b29a50f9f7a9a16c50.svg",
+    "main.044081b4.css.map": "/siren-group-test/static/css/main.044081b4.css.map",
+    "main.e88ffd50.js.map": "/siren-group-test/static/js/main.e88ffd50.js.map",
+    "787.6e42e9b9.chunk.js.map": "/siren-group-test/static/js/787.6e42e9b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.044081b4.css",
+    "static/js/main.e88ffd50.js"
+  ]
+}
