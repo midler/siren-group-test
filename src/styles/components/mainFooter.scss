@@ -31,7 +31,7 @@
     }
   }
 
-  &__menu-item {
+  &__menuItem {
     & + & {
       margin-top: 16px;
       @media (min-width: bootstrap.$desktop) {

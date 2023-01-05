@@ -1,7 +1,7 @@
 @use "../bootstrap/bootstrap.scss";
 
 .calculate {
-  &__container-wrapper {
+  &__containerWrapper {
     @media (min-width: bootstrap.$desktop) {
       border-radius: 24px;
       padding: 64px 96px 96px;
@@ -45,7 +45,7 @@
     }
   }
 
-  &__attention-text {
+  &__attentionText {
     font-style: normal;
     flex: 1;
   }
@@ -93,7 +93,7 @@
     }
   }
 
-  &__form-field {
+  &__formField {
     margin: 0;
     padding: 0;
     border: none;
@@ -104,7 +104,7 @@
     }
   }
 
-  &__form-field-title {
+  &__formFieldTitle {
     font-weight: 500;
     font-size: 23px;
     line-height: 1.4;
@@ -113,11 +113,11 @@
     padding: 0;
   }
 
-  &__form-input {
+  &__formInput {
     margin-bottom: 8px;
   }
 
-  &__form-input-text {
+  &__formInputText {
     margin: 0;
     margin-bottom: 16px;
   }

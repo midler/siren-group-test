@@ -48,7 +48,7 @@
     background-color: #f5f6fe;
   }
 
-  &__progress-line {
+  &__progressLine {
     background-color: #52c41a;
     height: 4px;
     transition: width 0.2s ease 0s;
@@ -86,7 +86,7 @@
     }
   }
 
-  &__buttons-list {
+  &__buttonsList {
     @include bootstrap.listReset;
     margin-bottom: 16px;
 
@@ -99,7 +99,7 @@
     }
   }
 
-  &__buttons-list-item {
+  &__buttonsListItem {
     & + & {
       margin-top: 8px;
 
@@ -142,7 +142,7 @@
     }
   }
 
-  &__form-input {
+  &__formInput {
     & + & {
       margin-top: 8px;
       @media (min-width: bootstrap.$desktop) {
@@ -151,7 +151,7 @@
     }
   }
 
-  &__form-button {
+  &__formButton {
     margin-top: 16px;
     margin-bottom: 16px;
 

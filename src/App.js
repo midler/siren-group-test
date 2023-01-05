@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { createPortal } from "react-dom";
 
 import "./App.scss";
@@ -14,16 +14,20 @@ import LogoFooterSVG from "./assets/images/logo-footer.svg";
 import offerImage from "./assets/images/offer.jpg";
 
 function App() {
+  const formToScroll = useRef(null);
   const [zipCode, useZipCode] = useState("");
   const useZipCodeHandler = (e) => useZipCode(e.target.value);
   const [showModal, setShowModal] = useState(false);
+
+  const executeScroll = () =>
+    formToScroll.current.scrollIntoView({  behavior: "smooth" });
 
   return (
     <>
       <div className="mainPage">
         <header className="mainPage__header mainHeader">
           <div className="mainPage__container">
-            <div className="mainHeader__layer-1">
+            <div className="mainHeader__layer1">
               <Logo
                 src={LogoSVG}
                 alt={"Logo HomeBuddy for for homeowners"}
@@ -32,16 +36,11 @@ function App() {
                 className="mainHeader__logo"
               />
 
-              <Link
-                className="mainHeader__link"
-                handleClick={() => {
-                  setShowModal(true);
-                }}
-              >
+              <Link className="mainHeader__link" handleClick={executeScroll}>
                 Link to form
               </Link>
             </div>
-            <section className="mainHeader__layer-2">
+            <section className="mainHeader__layer2">
               <div className="mainHeader__offer">
                 <h2 className="mainHeader__title">
                   How{" "}
@@ -120,9 +119,9 @@ function App() {
           </section>
           <div className="mainPage__calculate calculate">
             <div className="mainPage__container mainPage__container--no-padding">
-              <div className="calculate__container-wrapper">
+              <div className="calculate__containerWrapper">
                 <p className="calculate__attention">
-                  <i className="calculate__attention-text">
+                  <i className="calculate__attentionText">
                     You will be surprised how affordable gutter guards are!
                   </i>
                 </p>
@@ -130,9 +129,13 @@ function App() {
                   <h2 className="calculate__title">
                     See How Much Gutter Guards Cost In The XX, XXX Area
                   </h2>
-                  <form action="" className="calculate__form">
-                    <fieldset className="calculate__form-field">
-                      <legend className="calculate__form-field-title">
+                  <form
+                    action=""
+                    className="calculate__form"
+                    ref={formToScroll}
+                  >
+                    <fieldset className="calculate__formField">
+                      <legend className="calculate__formFieldTitle">
                         What is your ZIP Code?
                       </legend>
                       <Input
@@ -141,12 +144,18 @@ function App() {
                         placeholder="12345"
                         onChange={useZipCodeHandler}
                         value={zipCode}
-                        className="calculate__form-input"
+                        className="calculate__formInput"
                       />
-                      <p className="calculate__form-input-text">
+                      <p className="calculate__formInputText">
                         Free, no-obligation estimates.
                       </p>
-                      <Button wide={true} className="calculate__form-button">
+                      <Button
+                        wide={true}
+                        className="calculate__formButton"
+                        onClick={() => {
+                          setShowModal(true);
+                        }}
+                      >
                         Get estimate
                       </Button>
                     </fieldset>
@@ -167,19 +176,19 @@ function App() {
                 className="mainHeader__logo mainFooter__logo"
               />
               <ul className="mainFooter__menu">
-                <li className="mainFooter__menu-item">
+                <li className="mainFooter__menuItem">
                   <Link href="#">Terms of Use</Link>
                 </li>
-                <li className="mainFooter__menu-item">
+                <li className="mainFooter__menuItem">
                   <Link href="#">Privacy Policy</Link>
                 </li>
-                <li className="mainFooter__menu-item">
+                <li className="mainFooter__menuItem">
                   <Link href="#">Cookie Policy</Link>
                 </li>
-                <li className="mainFooter__menu-item">
+                <li className="mainFooter__menuItem">
                   <Link href="#">Do Not Sell My PersonalInformation</Link>
                 </li>
-                <li className="mainFooter__menu-item">
+                <li className="mainFooter__menuItem">
                   <Link href="#">Contact us</Link>
                 </li>
               </ul>

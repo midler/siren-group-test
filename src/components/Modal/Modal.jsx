@@ -14,9 +14,9 @@ export const Modal = ({ handleClick }) => {
   const [name, setName] = useState("");
   const [mail, setMail] = useState("");
 
-  const handleSection = () => {
-    setProgress(100);
-    setStep(2);
+  const handleSection = (progress, step) => {
+    setProgress(progress);
+    setStep(step);
   };
 
   return (
@@ -27,7 +27,7 @@ export const Modal = ({ handleClick }) => {
         </button>
         <div className="modal__progress">
           <div
-            className="modal__progress-line"
+            className="modal__progressLine"
             style={{ width: `${progress}%` }}
           ></div>
         </div>
@@ -38,8 +38,8 @@ export const Modal = ({ handleClick }) => {
             <h2 className="modal__title">
               Are you homeowner or authrized to make property changes?
             </h2>
-            <ul className="modal__buttons-list">
-              <li className="modal__buttons-list-item">
+            <ul className="modal__buttonsList">
+              <li className="modal__buttonsListItem">
                 <CheckButton
                   active={homeowner}
                   onClick={() => setHomeowner(true)}
@@ -70,7 +70,7 @@ export const Modal = ({ handleClick }) => {
                   Yes
                 </CheckButton>
               </li>
-              <li className="modal__buttons-list-item">
+              <li className="modal__buttonsListItem">
                 <CheckButton
                   active={!homeowner}
                   onClick={() => setHomeowner(false)}
@@ -105,7 +105,7 @@ export const Modal = ({ handleClick }) => {
             <Button
               wide
               className="modal__button"
-              onClick={() => handleSection()}
+              onClick={() => handleSection(100, 2)}
             >
               Next
             </Button>
@@ -125,7 +125,7 @@ export const Modal = ({ handleClick }) => {
                 placeholder="John Doe"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
-                className="modal__form-input"
+                className="modal__formInput"
               />
               <Input
                 type="text"
@@ -133,12 +133,12 @@ export const Modal = ({ handleClick }) => {
                 placeholder="example@example.com"
                 onChange={(e) => setMail(e.target.value)}
                 value={mail}
-                className="modal__form-input"
+                className="modal__formInput"
               />
               <Button
                 wide
-                className="modal__button modal__form-button"
-                onClick={() => handleSection()}
+                className="modal__button modal__formButton"
+                onClick={handleClick}
               >
                 Next
               </Button>
